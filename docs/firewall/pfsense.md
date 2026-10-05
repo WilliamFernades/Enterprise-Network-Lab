@@ -58,6 +58,7 @@ O pfSense da Matriz atua como gateway das redes corporativas do site.
 | ------- | ---------------- | ------------- |
 | VLAN 20 | `172.16.20.0/28` | TI            |
 | VLAN 30 | `10.10.30.0/30`  | Servidores    |
+| VLAN 10 | `172.16.10.0/28` | Usuarios      |
 | VLAN 99 | `172.16.99.0/30` | Gerenciamento |
 
 ---
@@ -93,6 +94,8 @@ O pfSense da Filial possui função equivalente, atendendo as redes corporativas
 | VLAN    | Rede             | Função     |
 | ------- | ---------------- | ---------- |
 | VLAN 21 | `172.16.21.0/29` | TI         |
+| VLAN 11 | `172.16.11.0/28` | Comercial  |
+| VLAN 12 | `172.16.12.0/28` | Marketing  |
 | VLAN 31 | `172.16.31.0/30` | Servidores |
 
 ---
