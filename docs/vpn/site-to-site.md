@@ -204,6 +204,11 @@ Resultado esperado:
 IKE / Phase 1
 STATUS: UP
 ```
+## Phase 1
+
+A associação IKE foi estabelecida entre os firewalls.
+
+![IPsec Phase 1](image/phase1-up-mtz.png)
 
 ---
 
@@ -219,6 +224,20 @@ P2-02  UP
 P2-03  UP
 P2-04  UP
 ```
+
+## Phase 2
+
+Os quatro seletores de tráfego foram estabelecidos.
+
+![IPsec Phase 2](image/phase2-up-mtz.png) 
+
+## Teste de conectividade
+
+Foi realizado teste de comunicação entre a VLAN 20 da Matriz e a VLAN 21 da Filial.
+
+![Teste de conectividade](image/connectivity-test-mtz-fl.png)
+
+![Teste de conectividade](image/connectivity-test-mtz-fl-02.png)
 
 ---
 
