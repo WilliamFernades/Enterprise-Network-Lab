@@ -233,14 +233,6 @@ Os quatro seletores de tráfego foram estabelecidos.
 ![IPsec Phase 2](image/phase2-up-mtz.png) 
 ![IPsec Phase 1](image/phase2-up-fl.png)
 
-## Teste de conectividade
-
-Foi realizado teste de comunicação entre a VLAN 20 da Matriz e a VLAN 21 da Filial.
-
-![Teste de conectividade](image/connectivity-test-mtz-fl.png)
-
-![Teste de conectividade](image/connectivity-test-mtz-fl-02.png)
-
 ---
 
 ## 4. Firewall
@@ -262,6 +254,10 @@ Exemplo:
      v
 172.16.21.x
 ```
+
+![Teste de conectividade](image/connectivity-test-mtz-fl.png)
+
+![Teste de conectividade](image/connectivity-test-mtz-fl-02.png)
 
 Também são realizados testes entre as demais combinações de redes autorizadas.
 
