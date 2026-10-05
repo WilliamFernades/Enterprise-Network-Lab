@@ -213,9 +213,9 @@ Evidência das conexões a VPN:
 
 EvidÊncias do acesso ao banco de dados através da VPN:
 
-![acessos-penvpn](image/acess-db-net-external-01)
+![acessos-penvpn](docs/vpn/image/acess-db-net-external-01.png)
 
-![acessos-penvpn](image/acess-db-net-external-02)
+![acessos-penvpn](docs/vpn/image/acess-db-net-external-02.png)
 
 ---
 
