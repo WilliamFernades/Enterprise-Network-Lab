@@ -47,7 +47,7 @@ A segmentação lógica da Matriz pode ser representada da seguinte forma:
 
 ### Evidência — Topologia VLAN
 
-![IPsec Phase 1](image/phase1-up-mtz.png)
+![topology-sw-fw](image/topology-sw-fw.png)
 
 ---
 
@@ -64,9 +64,7 @@ Sua finalidade é manter os dispositivos de usuários separados das redes destin
 
 ### Evidência — VLAN 10
 
-> **[IMAGEM 02 — INSERIR AQUI]**
->
-> Output do ArubaOS-CX mostrando a VLAN 10 criada e seu estado operacional.
+![vlan-10](image/vlan-10.png)
 
 ---
 
@@ -85,9 +83,7 @@ A separação permite aplicar políticas específicas de firewall e controle de 
 
 ### Evidência — VLAN 20
 
-> **[IMAGEM 03 — INSERIR AQUI]**
->
-> Output mostrando a VLAN 20 e, se aplicável, as portas associadas.
+![vlan-20](image/vlan-20.png)
 
 ---
 
@@ -104,9 +100,7 @@ A separação dos servidores em uma VLAN própria permite aplicar políticas de 
 
 ### Evidência — VLAN 30
 
-> **[IMAGEM 04 — INSERIR AQUI]**
->
-> Output mostrando a VLAN 30 e as interfaces/portas associadas aos servidores.
+![vlan-30](image/vlan-30.png)
 
 ---
 
@@ -134,9 +128,7 @@ A utilização de uma VLAN dedicada permite separar o tráfego de gerenciamento 
 
 ### Evidência — VLAN de Gerenciamento
 
-> **[IMAGEM 05 — INSERIR AQUI]**
->
-> Output do ArubaOS-CX mostrando a VLAN 99 e seu estado.
+![vlan-99](image/vlan-99.png)
 
 ---
 
@@ -155,15 +147,7 @@ A configuração final deve apresentar os segmentos:
 
 ### Evidência — Tabela de VLANs
 
-> **[IMAGEM 06 — INSERIR AQUI]**
->
-> Usar o comando:
-
-```text
-show vlan
-```
-
-> A imagem deve mostrar as quatro VLANs e seus respectivos estados.
+![show-vlan](image/show-vlan.png)
 
 ---
 
@@ -186,11 +170,9 @@ Exemplo conceitual:
 
 As portas de acesso transportam o tráfego pertencente à VLAN definida para aquele segmento.
 
-### Evidência — Portas de Acesso
+### Evidência VLANS
 
-> **[IMAGEM 07 — INSERIR AQUI]**
->
-> Output mostrando as interfaces do ArubaOS-CX e as VLANs associadas.
+![show-vlan](image/show-vlan.png)
 
 ---
 
@@ -227,11 +209,11 @@ pfSense
 
 A utilização de uma rede específica para gerenciamento reduz a exposição da interface administrativa às demais redes.
 
-### Evidência — SVI de Gerenciamento
+![svi](image/svi.png)
 
-> **[IMAGEM 08 — INSERIR AQUI]**
->
-> Output mostrando a interface VLAN 99/SVI e o endereço `172.16.99.2/30`.
+### Evidência acesso SSH:
+
+![access-ssh](image/access-ssh.png)
 
 ---
 
@@ -253,9 +235,7 @@ pfSense
 
 ### Evidência — Teste de Conectividade
 
-> **[IMAGEM 09 — INSERIR AQUI]**
->
-> Output do ping realizado a partir do ArubaOS-CX para `172.16.99.1`.
+![ping-gateway](image/ping-gateway.png)
 
 ---
 
