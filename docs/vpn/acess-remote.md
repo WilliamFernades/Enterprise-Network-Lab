@@ -124,6 +124,10 @@ pfSense
 
 O acesso efetivo depende das regras de firewall aplicadas ao ambiente.
 
+Evidência da VPN criada:
+
+![Openvpn](image/openvpn-server.png)
+
 ---
 
 ## 5. Controle de Acesso
@@ -142,6 +146,10 @@ As políticas podem controlar:
 * Acesso à Internet através da VPN.
 
 O princípio utilizado é permitir somente os recursos necessários ao usuário remoto.
+
+Evidências das regras de firewall controlando acesso:
+
+![rule-penvpn](image/rule-openvpn-mtz.png)
 
 ---
 
@@ -200,6 +208,14 @@ pfSense Matriz
       v
 Recurso corporativo
 ```
+Evidência das conexões a VPN:
+![Conexões-penvpn](image/connect-openvpn.png)
+
+EvidÊncias do acesso ao banco de dados através da VPN:
+
+![acessos-penvpn](image/acess-db-net-external-01)
+
+![acessos-penvpn](image/acess-db-net-external-02)
 
 ---
 
