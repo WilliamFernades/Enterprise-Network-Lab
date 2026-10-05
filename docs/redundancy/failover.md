@@ -346,7 +346,3 @@ Seleção de outro gateway
       ↓
 Continuidade da conectividade
 ```
-
-### Evidência Final
-
-> **[IMAGEM 12 — INSE]()**
