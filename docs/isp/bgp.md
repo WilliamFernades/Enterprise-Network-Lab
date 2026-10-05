@@ -526,17 +526,45 @@ Nesse cenário, a análise deve considerar:
 
 As principais evidências da implementação BGP são:
 
-> **[IMAGEM 08 — INSERIR AQUI]**
->
-> Visão consolidada do `show ip bgp summary` dos três ISPs.
+![sum](image/bgp-summary-01.png)
 
-> **[IMAGEM 09 — INSERIR AQUI]**
->
-> Tabela BGP de um dos roteadores mostrando os prefixos aprendidos.
+![sum](image/bgp-03.png)
 
-> **[IMAGEM 10 — INSERIR AQUI]**
->
-> Teste de conectividade entre redes pertencentes a diferentes AS.
+ISP-01#ping 10.255.1.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.255.1.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/5 ms
+ISP-01#ping 10.255.2
+% Unrecognized host or address, or protocol not running.
+
+ISP-01#ping 10.255.2.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.255.2.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/5 ms
+
+ISP-02#ping 10.255.1.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.255.1.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+ISP-02#ping 10.255.3.2
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.255.3.2, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/4/5 ms
+
+ISP-03#ping 10.255.2.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.255.2.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+ISP-03#ping 10.255.3.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.255.3.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
 
 ---
 
