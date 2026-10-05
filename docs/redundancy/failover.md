@@ -6,9 +6,9 @@ Este documento descreve a implementação de redundância de links WAN no pfSens
 
 O ambiente utiliza três conexões WAN independentes, representadas no laboratório pelos provedores:
 
-* CLARO
-* VIVO
-* OI
+* ISP-01
+* ISP-02
+* ISP-03
 
 O objetivo do mecanismo de failover é manter a conectividade externa mesmo quando uma das conexões WAN apresenta indisponibilidade.
 
@@ -44,9 +44,7 @@ A Matriz possui três conexões WAN conectadas ao pfSense:
 
 ### Evidência — Topologia
 
-> **[IMAGEM 01 — INSERIR AQUI]**
->
-> Sugestão: screenshot ou diagrama mostrando o pfSense da Matriz conectado aos três links WAN.
+![topology](image/failover-topology.png)
 
 ---
 
@@ -56,17 +54,15 @@ As conexões utilizadas pelo pfSense da Matriz são:
 
 | Provedor | Rede             | IP do pfSense | Gateway       |
 | -------- | ---------------- | ------------- | ------------- |
-| CLARO    | `100.64.10.0/30` | `100.64.10.2` | `100.64.10.1` |
-| VIVO     | `100.64.20.0/30` | `100.64.20.2` | `100.64.20.1` |
-| OI       | `100.64.30.0/30` | `100.64.30.2` | `100.64.30.1` |
+| ISP-01   | `100.64.10.0/30` | `100.64.10.2` | `100.64.10.1` |
+| ISP-02   | `100.64.20.0/30` | `100.64.20.2` | `100.64.20.1` |
+| ISP-03   | `100.64.30.0/30` | `100.64.30.2` | `100.64.30.1` |
 
 Os três gateways são utilizados pelo mecanismo de monitoramento e seleção de rota do pfSense.
 
 ### Evidência — Interfaces WAN
 
-> **[IMAGEM 02 — INSERIR AQUI]**
->
-> Tela do pfSense mostrando as interfaces WAN e seus respectivos endereços IP.
+![interfaces](image/interfaces-wan.png)
 
 ---
 
@@ -95,9 +91,7 @@ A prioridade efetiva dos links deve ser observada diretamente na configuração 
 
 ### Evidência — GW_JANUS
 
-> **[IMAGEM 03 — INSERIR AQUI]**
->
-> Tela `System > Routing > Gateway Groups`, mostrando o grupo `GW_JANUS` e os gateways associados.
+![group-gateways](image/group-gateway.png)
 
 ---
 
@@ -127,9 +121,7 @@ O monitoramento permite diferenciar uma interface fisicamente ativa de um caminh
 
 ### Evidência — Status dos Gateways
 
-> **[IMAGEM 04 — INSERIR AQUI]**
->
-> Tela `Status > Gateways`, mostrando o estado dos três gateways.
+![status](image/status-gateway.png)
 
 ---
 
@@ -165,9 +157,9 @@ A escolha do link é determinada pelo estado e pela prioridade dos gateways conf
 
 ### Evidência — Regra utilizando GW_JANUS
 
-> **[IMAGEM 05 — INSERIR AQUI]**
->
-> Screenshot de uma regra de firewall da interface interna mostrando `GW_JANUS` como gateway.
+![rule](image/rule-failover.png)
+
+![rule-02](image/rule-failover-02.png)
 
 ---
 
@@ -189,9 +181,7 @@ Com os três links disponíveis, o tráfego segue a política de prioridade conf
 
 ### Evidência — Operação Normal
 
-> **[IMAGEM 06 — INSERIR AQUI]**
->
-> Evidência mostrando os três gateways disponíveis antes do teste de failover.
+![operação-normal-02](image/internet-normal.png)
 
 ---
 
@@ -219,21 +209,19 @@ Fluxo esperado:
 
 ### Evidência — Antes da Falha
 
-> **[IMAGEM 07 — INSERIR AQUI]**
->
-> Screenshot mostrando o estado dos gateways antes da interrupção.
+![gateway-normal](image/status-gateway.png)
 
 ### Evidência — Durante a Falha
 
-> **[IMAGEM 08 — INSERIR AQUI]**
->
-> Screenshot mostrando o gateway principal indisponível.
+![link-01-down](image/link01-down.png)
+
+![link-02-down](image/link02-down.png)
 
 ### Evidência — Após Failover
 
-> **[IMAGEM 09 — INSERIR AQUI]**
->
-> Screenshot mostrando o tráfego funcionando através do gateway secundário.
+![traffic-02](image/traffect-passing-link02.png)
+
+![traffic-03](image/traffect-passing-link03.png)
 
 ---
 
@@ -257,9 +245,7 @@ O objetivo é verificar não somente se o gateway mudou, mas se a conectividade 
 
 ### Evidência — Testes
 
-> **[IMAGEM 10 — INSERIR AQUI]**
->
-> Screenshot dos testes de conectividade realizados durante o failover.
+![traffic2-02](image/traffect-passing-link02.png)
 
 ---
 
@@ -289,9 +275,7 @@ Link primário novamente disponível
 
 ### Evidência — Recuperação
 
-> **[IMAGEM 11 — INSERIR AQUI]**
->
-> Screenshot mostrando os gateways novamente disponíveis após a recuperação do link.
+![rescue-all-link](image/rescue-all-links.png)
 
 ---
 
