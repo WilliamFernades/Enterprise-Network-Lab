@@ -209,6 +209,7 @@ STATUS: UP
 A associação IKE foi estabelecida entre os firewalls.
 
 ![IPsec Phase 1](image/phase1-up-mtz.png)
+![IPsec Phase 1](image/phase1-up-fl.png)
 
 ---
 
@@ -230,6 +231,7 @@ P2-04  UP
 Os quatro seletores de tráfego foram estabelecidos.
 
 ![IPsec Phase 2](image/phase2-up-mtz.png) 
+![IPsec Phase 1](image/phase2-up-fl.png)
 
 ## Teste de conectividade
 
