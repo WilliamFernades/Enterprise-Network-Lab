@@ -69,6 +69,10 @@ A regra considera:
 
 A publicação foi realizada de forma específica para o serviço necessário, evitando a exposição de portas adicionais do servidor.
 
+Evidência do nat criado:
+
+![NAT-PORT-FORWARD-MTZ](imagem/nat-port-forward.png)
+
 ---
 
 ## 3. Relação entre NAT e Firewall
@@ -98,6 +102,10 @@ O NAT realiza a tradução do destino da conexão.
 A política de firewall determina se o tráfego recebido pode ser encaminhado.
 
 Dessa forma, a publicação do serviço não significa que o servidor interno esteja diretamente exposto à Internet.
+
+Evidência da regra de firewall liberando:
+
+![RULE-NAT-MTZ](imagem/firewall-nat-rule.png)
 
 ---
 
@@ -159,6 +167,10 @@ Site de vendas acessível
 ```
 
 Além da disponibilidade do site, a validação confirmou que o encaminhamento estava chegando ao servidor interno correto.
+
+Evidência do NAT funcionando, acesso externo:
+
+![VALIDAÇÃO-NAT-MTZ](imagem/site-external-test.png) 
 
 ---
 
