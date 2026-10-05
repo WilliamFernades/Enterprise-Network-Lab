@@ -40,9 +40,7 @@ As conexões de trânsito utilizadas entre os AS são:
 
 ### Evidência — Topologia BGP
 
-> **[IMAGEM 01 — INSERIR AQUI]**
->
-> Diagrama ou screenshot do EVE-NG mostrando os três roteadores ISP-01, ISP-02 e ISP-03 e os enlaces entre eles.
+![topology](image/topology-isp.png)
 
 ---
 
@@ -94,9 +92,11 @@ Cada roteador possui dois vizinhos BGP.
 
 ### Evidência — Configuração dos Neighbors
 
-> **[IMAGEM 02 — INSERIR AQUI]**
->
-> Screenshot de uma das configurações BGP mostrando o `router bgp`, ASN local e os comandos `neighbor`.
+![bgp-01](image/config-bgp-01.png)
+
+![bgp-02](image/config-bgp-02.png)
+
+![bgp-03](image/config-bgp-03.png)
 
 ---
 
@@ -129,8 +129,12 @@ O mesmo princípio é utilizado nos demais ISPs.
 ### Evidência — Prefixos Locais
 
 > **[IMAGEM 03 — INSERIR AQUI]**
->
-> Screenshot do `show ip route` ou comando equivalente mostrando o prefixo local e sua rota para `Null0`.
+
+![route01](image/route-01.png)
+
+![route02](image/route-02.png)
+
+![route-03](image/route-03.png)
 
 ---
 
@@ -193,8 +197,8 @@ Exemplo no ISP-03:
 ### Evidência — Tabela BGP
 
 > **[IMAGEM 04 — INSERIR AQUI]**
->
-> Screenshot do `show ip bgp` mostrando os prefixos aprendidos pelos vizinhos.
+
+![bpg-04](image/config-bgp-01.png)
 
 ---
 
@@ -329,9 +333,11 @@ Uma sessão em estado `Established` indica que a adjacência BGP foi estabelecid
 
 ### Evidência — BGP Summary
 
-> **[IMAGEM 05 — INSERIR AQUI]**
->
-> Screenshot do `show ip bgp summary` no ISP-01, mostrando os vizinhos ISP-02 e ISP-03 em estado `Established`.
+![bpg-summary1](image/bgp-summary-01.png)
+
+![bpg-summary2](image/bgp-summary-02.png)
+
+![bpg-summary3](image/bgp-summary-03.png)
 
 ---
 
@@ -357,9 +363,7 @@ show ip bgp 10.100.2.0
 
 ### Evidência — Rotas BGP
 
-> **[IMAGEM 06 — INSERIR AQUI]**
->
-> Screenshot mostrando os prefixos BGP aprendidos e instalados na tabela de roteamento.
+![bpg04](image/bgp-02.png)
 
 ---
 
