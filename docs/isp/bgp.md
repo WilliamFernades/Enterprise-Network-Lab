@@ -128,8 +128,6 @@ O mesmo princípio é utilizado nos demais ISPs.
 
 ### Evidência — Prefixos Locais
 
-> **[IMAGEM 03 — INSERIR AQUI]**
-
 ![route01](image/route-01.png)
 
 ![route02](image/route-02.png)
